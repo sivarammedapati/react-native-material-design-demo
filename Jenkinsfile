@@ -7,12 +7,15 @@ pipeline
 		{
 			steps
 			{
-				jdk = tool name: 'java8'
-  				env.JAVA_HOME = "${jdk}"
-				dir("android") 
+				script
 				{
-    					sh label: '', script: './gradlew assembleRelease'
-				}	
+					jdk = tool name: 'java8'
+  					env.JAVA_HOME = "${jdk}"
+					dir("android") 
+					{
+    						sh label: '', script: './gradlew assembleRelease'
+					}
+				}
 			}
 		}
 	}
