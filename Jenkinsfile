@@ -14,7 +14,7 @@ pipeline
 			{
 				script
 				{
-					sh label: '', script: '/usr/local/lib/node_modules/npm/bin/npm-cli.js install — production'
+					sh label: '', script: '/usr/local/lib/node_modules/npm/bin/npm-cli.js install'
 					jdk = tool name: 'java8'
   					env.JAVA_HOME = "${jdk}"
 					dir("android") 
