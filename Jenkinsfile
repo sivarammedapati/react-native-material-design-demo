@@ -14,7 +14,7 @@ pipeline
 				script
 				{
 					nodejs = tool name 'node11'
-  					sh label: '', script: "$nodejs/npm install"
+					sh label: '', script: "${nodejs}/npm install"
 					jdk = tool name: 'java8'
   					env.JAVA_HOME = "${jdk}"
 					dir("android") 
