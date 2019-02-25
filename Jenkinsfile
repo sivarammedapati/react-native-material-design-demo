@@ -4,7 +4,6 @@ pipeline
 	environment 
   	{
       		ANDROID_HOME = "/Users/1024257/Library/Android/sdk"
-		PATH = "$PATH:/usr/local/lib/node_modules/npm/bin/npm-cli.js"
     	}
 	stages
 	{
@@ -14,7 +13,7 @@ pipeline
 			{
 				script
 				{
-					sh label: '', script: '/usr/local/lib/node_modules/npm/bin/npm-cli.js install react-native-android-statusbar'
+					sh label: '', script: '/usr/local/bin/node install react-native-android-statusbar'
 					jdk = tool name: 'java8'
   					env.JAVA_HOME = "${jdk}"
 					dir("android") 
