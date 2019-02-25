@@ -13,6 +13,7 @@ pipeline
 			{
 				script
 				{
+					sh label: '', script: 'npm install — production'
 					jdk = tool name: 'java8'
   					env.JAVA_HOME = "${jdk}"
 					dir("android") 
