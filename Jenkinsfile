@@ -4,6 +4,7 @@ pipeline
 	environment 
   	{
       		ANDROID_HOME = "/Users/1024257/Library/Android/sdk"
+		PATH = "$PATH:/usr/local/lib/node_modules/npm/bin/npm-cli.js"
     	}
 	stages
 	{
