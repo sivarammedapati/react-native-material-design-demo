@@ -25,7 +25,7 @@ pipeline
   					env.JAVA_HOME = "${jdk}"
 					dir("android") 
 					{
-    						sh label: '', script: './gradlew assembleRelease --stacktrace'
+    						sh label: '', script: './gradlew assembleRelease -x bundleReleaseJsAndAssets --stacktrace'
 					}
 				}
 			}
