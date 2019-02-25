@@ -18,7 +18,8 @@ pipeline
 				script
 				{
 					sh label: '', script: 'npm install'
-					// sh label: '', script: 'npm uninstall react-native'
+					sh label: '', script: 'npm install react-native-cli'
+					
 					jdk = tool name: 'java8'
   					env.JAVA_HOME = "${jdk}"
 					dir("android") 
