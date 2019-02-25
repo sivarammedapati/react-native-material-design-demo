@@ -31,4 +31,11 @@ pipeline
 			}
 		}
 	}
+	post 
+  	{
+    		success 
+      		{
+            		archiveArtifacts artifacts: '**/*.apk'
+          	}
+	}
 }
