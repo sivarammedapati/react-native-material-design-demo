@@ -13,7 +13,11 @@ pipeline
 			{
 				script
 				{
-					sh label: '', script: '/usr/local/bin/npm install react-native-android-statusbar'
+					tools 
+					{
+   			 			nodejs 'node11'
+  					}
+					sh label: '', script: 'npm install react-native-android-statusbar'
 					jdk = tool name: 'java8'
   					env.JAVA_HOME = "${jdk}"
 					dir("android") 
