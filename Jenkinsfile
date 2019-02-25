@@ -18,6 +18,7 @@ pipeline
 				script
 				{
 					sh label: '', script: 'npm install'
+					sh label: '', script: 'npm install react-native'
 					sh label: '', script: 'npm install react-native-cli'
 					
 					jdk = tool name: 'java8'
