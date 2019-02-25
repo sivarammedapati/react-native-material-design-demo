@@ -1,6 +1,10 @@
 pipeline
 {
 	agent any
+	tools 
+	{
+    		nodejs 'node11'
+  	}
 	environment 
   	{
       		ANDROID_HOME = "/Users/1024257/Library/Android/sdk"
@@ -13,8 +17,7 @@ pipeline
 			{
 				script
 				{
-					nodejs = tool name 'node11'
-					sh label: '', script: "${nodejs}/npm install"
+					sh label: '', script: 'npm install'
 					jdk = tool name: 'java8'
   					env.JAVA_HOME = "${jdk}"
 					dir("android") 
