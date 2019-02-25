@@ -1,6 +1,10 @@
 pipeline
 {
 	agent any
+	environment 
+  	{
+      		ANDROID_HOME = "/Users/1024257/Library/Android/sdk"
+    	}
 	stages
 	{
 		stage('build android')
