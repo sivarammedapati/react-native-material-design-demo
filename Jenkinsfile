@@ -18,12 +18,12 @@ pipeline
 				script
 				{
 					sh label: '', script: 'npm install'
-					sh label: '', script: 'npm uninstall react-native'
+					// sh label: '', script: 'npm uninstall react-native'
 					jdk = tool name: 'java8'
   					env.JAVA_HOME = "${jdk}"
 					dir("android") 
 					{
-    						sh label: '', script: './gradlew assembleRelease'
+    						sh label: '', script: './gradlew assembleRelease --stacktrace'
 					}
 				}
 			}
